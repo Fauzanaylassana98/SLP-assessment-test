@@ -9,17 +9,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Nama_Dosen: {
-        type: Sequelize.STRING
-      },
-      Email_Dosen: {
-        type: Sequelize.STRING
-      },
+      // Nama_Dosen: {
+      //   type: Sequelize.STRING
+      // },
+      // Email_Dosen: {
+      //   type: Sequelize.STRING
+      // },
       Password: {
         type: Sequelize.STRING
       },
-      Adviser_For_Dosen_ID: {
-        type: Sequelize.INTEGER
+      ID_Dosen: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Data_Dosen',
+          key: 'id',
+          as: 'ID_Dosen',
+        }
+
       },
       createdAt: {
         allowNull: false,

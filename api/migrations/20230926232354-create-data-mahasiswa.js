@@ -33,6 +33,16 @@ module.exports = {
           as: 'ID_Kelas',
         }
       },
+      Nama_Ortu: {
+        type: Sequelize.STRING
+      },
+      Nomor_Telp_Ortu: {
+        type: Sequelize.STRING
+      },
+      Foto_Profil: {
+        allowNull: true,
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

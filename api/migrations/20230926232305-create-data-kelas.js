@@ -12,8 +12,17 @@ module.exports = {
       Nama_Kelas: {
         type: Sequelize.STRING
       },
-      ID_Dosen_Wali: {
+      Tahun_Ajaran: {
         type: Sequelize.INTEGER
+      },
+      ID_Dosen_Wali: {
+        type: Sequelize.INTEGER,
+        // onDelete: 'CASCADE',
+        // references: {
+        //   model: 'Data_Dosen_Wali',
+        //   key: 'id',
+        //   as: 'ID_Dosen_Wali',
+        // }
       },
       createdAt: {
         allowNull: false,
